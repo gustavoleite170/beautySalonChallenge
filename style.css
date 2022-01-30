@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*==========ROOT==========*/
+:root {
+  --height: 4.5rem;
+
+  --color: 159;
+  --color-light: hsl(var(--color), 65%, 88%, 1);
+  --color-medium: hsl(var(--color), 36%, 57%, 1);
+  --color-dark: hsl(var(--color), 41%, 10%, 1);
+  --ice-white: hsl(0, 0%, 98%, 1);
+  --white: hsl(0, 0%, 100%, 1);
+}
+
+/*==========ROOT==========*/
+
+/*==========GENERAL==========*/
+.margins {
+  margin: 0 1.5rem;
+}
+
+a.logo {
+  color: var(--color-dark);
+  font: 700 1.3125rem/2rem 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.logo span {
+  color: var(--color-medium);
+}
+
+.title {
+  font: 700 1.875rem/2.8125rem 'Poppins', sans-serif;
+}
+/*==========GENERAL==========*/
+
+/*==========HEADER==========*/
+#header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: var(--height);
+  background-color: var(--ice-white);
+}
+
+#header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/*==========HEADER==========*/
+
+/*==========ROOT==========*/
+
+/*==========ROOT==========*/
