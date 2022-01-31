@@ -15,13 +15,23 @@
   --color-dark: hsl(var(--color), 41%, 10%, 1);
   --ice-white: hsl(0, 0%, 98%, 1);
   --white: hsl(0, 0%, 100%, 1);
+  --gray: #e4e4e4;
+  --text-gray: hsl(0, 0%, 46%, 1);
 }
 
 /*==========ROOT==========*/
 
 /*==========GENERAL==========*/
+main {
+  overflow: hidden;
+}
+
 .margins {
   margin: 0 1.5rem;
+}
+
+.paddings {
+  padding: 5rem 0;
 }
 
 a.logo {
@@ -36,6 +46,20 @@ a.logo {
 
 .title {
   font: 700 1.875rem/2.8125rem 'Poppins', sans-serif;
+  color: var(--color-dark);
+}
+
+.text-smooth {
+  font: 400 1rem/1.3125rem 'DM Sans', sans-serif;
+  color: var(--text-gray);
+}
+
+.get-in-contact {
+  font: 500 1rem/1.3125rem 'DM Sans', sans-serif;
+  color: var(--ice-white);
+  background-color: var(--color-medium);
+  padding: 0.875rem 2rem 0.9375rem;
+  border-radius: 0.25rem;
 }
 /*==========GENERAL==========*/
 
@@ -46,6 +70,7 @@ a.logo {
   width: 100vw;
   height: var(--height);
   background-color: var(--ice-white);
+  border-bottom: solid 1px var(--gray);
 }
 
 #header nav {
@@ -55,6 +80,66 @@ a.logo {
 }
 /*==========HEADER==========*/
 
-/*==========ROOT==========*/
+/*==========NAVIGATION==========*/
 
-/*==========ROOT==========*/
+ul {
+  visibility: hidden;
+  position: fixed;
+}
+
+/*==========NAVIGATION==========*/
+
+/*==========HOME==========*/
+#home {
+  background-color: var(--ice-white);
+}
+
+#home > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#home section.image {
+  width: min(89.58vw, 35.0625rem);
+  position: relative;
+}
+
+#home img {
+  position: relative;
+  width: 100%;
+  left: -2.4%;
+  border-radius: 0.25rem;
+}
+
+#home .image::before {
+  content: '';
+  position: absolute;
+  top: -16.79%;
+  right: -16.69%;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-light);
+  border-radius: 0.25rem;
+  z-index: 0;
+}
+
+#home section.margins {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+}
+
+#home .margins a {
+  padding-top: 1rem;
+}
+
+#home section.margins div {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  height: 3.3125rem;
+}
+/*==========HOME==========*/
