@@ -71,12 +71,20 @@ a.logo {
     var(--color-medium)
   );
 }
+
+.divider-2 {
+  height: 1px;
+  width: 100vw;
+  background-image: linear-gradient(
+    270deg,
+    var(--ice-white),
+    var(--color-medium)
+  );
+}
 /*==========GENERAL==========*/
 
 /*==========HEADER==========*/
 #header {
-  display: flex;
-  align-items: center;
   width: 100vw;
   height: var(--height);
   background-color: var(--ice-white);
@@ -84,17 +92,97 @@ a.logo {
 }
 
 #header nav {
+  position: relative;
   display: flex;
+  height: var(--height);
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
+
+#header li {
+  position: relative;
+}
+
+#header li a {
+  transition: color 0.3s;
+}
+
+#header li:hover a {
+  color: var(--color-medium);
+}
+
+#header li::after {
+  content: '';
+  visibility: hidden;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  width: 0%;
+  height: 0.25rem;
+  background-color: var(--ice-white);
+  transition-duration: 0.5s, 0.5s, 0.5s;
+  transition-property: width, background-color, bottom;
+}
+
+#header li:hover::after {
+  visibility: visible;
+  width: 100%;
+  bottom: -1rem;
+  background-color: var(--color-medium);
+}
+
 /*==========HEADER==========*/
 
 /*==========NAVIGATION==========*/
 
-ul {
+#navigations {
   visibility: hidden;
   position: fixed;
+  align-self: flex-start;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--ice-white);
+  padding: 23.1% 0;
+  z-index: 101;
+  list-style-type: none;
+}
+
+.show #navigations {
+  visibility: visible;
+}
+
+.show .icon-menu {
+  visibility: hidden;
+}
+
+.show .icon-close {
+  visibility: visible;
+  position: fixed;
+}
+
+.icon-close {
+  visibility: hidden;
+}
+
+.icon-menu,
+.icon-close {
+  position: absolute;
+  right: 0;
+  font-size: 1.5rem;
+  color: var(--color-medium);
+  z-index: 102;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon-menu:hover,
+.icon-close:hover {
+  color: var(--color-light);
 }
 
 /*==========NAVIGATION==========*/
