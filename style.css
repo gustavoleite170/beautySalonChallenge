@@ -49,6 +49,11 @@ a.logo {
   color: var(--color-dark);
 }
 
+.title-2 {
+  font: 700 1.5rem/2.25rem 'Poppins', sans-serif;
+  color: var(--color-dark);
+}
+
 .text-smooth {
   font: 400 1rem/1.625rem 'DM Sans', sans-serif;
   color: var(--text-gray);
@@ -86,6 +91,12 @@ a.logo {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.flex-1rem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 /*==========GENERAL==========*/
 
@@ -277,6 +288,14 @@ a.logo {
 /*==========ABOUT==========*/
 
 /*==========SERVICES==========*/
+
+#services section:first-child p {
+  color: var(--color-dark);
+}
+
+#services section:first-child p span {
+  color: var(--color-medium);
+}
 
 /*==========SERVICES==========*/
 
