@@ -289,11 +289,37 @@ a.logo {
 
 /*==========SERVICES==========*/
 
+#services {
+  background-color: var(--ice-white);
+}
+
 #services section:first-child p {
   color: var(--color-dark);
 }
 
 #services section:first-child p span {
+  color: var(--color-medium);
+  font-weight: 700;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  border: 0.5px solid var(--gray);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.25rem var(--color-medium);
+  background-color: var(--ice-white);
+}
+
+.card.flex {
+  align-items: center;
+}
+
+.card.flex .flex-1rem {
+  text-align: center;
+}
+
+.card.flex div:first-child {
+  font-size: 5rem;
   color: var(--color-medium);
 }
 
