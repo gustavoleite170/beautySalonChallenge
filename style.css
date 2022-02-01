@@ -127,16 +127,16 @@ a.logo {
   width: 0%;
   height: 0.25rem;
   background-color: var(--ice-white);
-  transition-duration: 0.5s, 0.5s, 0.5s;
-  transition-property: width, background-color, bottom;
+  transition: width 0.5s;
 }
 
-#header li:hover::after {
-  visibility: visible;
-  width: 100%;
-  bottom: -1rem;
-  background-color: var(--color-medium);
-}
+@media (hover: hover) {
+  #header li:hover::after {
+    visibility: visible;
+    width: 100%;
+    background-color: var(--color-medium);
+  }
+} /* To prevent bugs on mobile devices when touching menu options*/
 
 /*==========HEADER==========*/
 
@@ -154,12 +154,12 @@ a.logo {
   align-items: center;
   background-color: var(--ice-white);
   padding: 23.1% 0;
-  z-index: 101;
   list-style-type: none;
 }
 
 .show #navigations {
   visibility: visible;
+  z-index: 101;
 }
 
 .show .icon-menu {
@@ -279,3 +279,16 @@ a.logo {
 /*==========SERVICES==========*/
 
 /*==========SERVICES==========*/
+
+/*=================================*/
+/*==========RESPONSIVE==========*/
+/*=================================*/
+
+/*==========600px==========*/
+
+@media only screen and (min-width: 600px) {
+  #home section.image,
+  #about .image {
+    margin: 0 auto;
+  }
+}
