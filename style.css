@@ -8,7 +8,7 @@
 /*==========ROOT==========*/
 :root {
   --height: 4.5rem;
-  --margin-width: 1.5rem;
+  --margin-width: 6.4vw;
 
   --color: 159;
   --color-light: hsl(var(--color), 65%, 88%, 1);
@@ -362,8 +362,23 @@ cite img {
   height: 15rem;
 }
 
-.swiper-pagination-bullet-active {
-  color: var(--color-medium);
+.swiper-slide {
+  border: 0.5px solid var(--gray);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.25rem var(--color-medium);
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-medium);
+}
+
+.swiper .swiper-pagination-bullet {
+  margin-top: 2rem;
+}
+
+.swiper .swiper-pagination-bullet {
+  height: 0.75rem;
+  width: 0.75rem;
 }
 /*==========TESTIMONIALS==========*/
 
