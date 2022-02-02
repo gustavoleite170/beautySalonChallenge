@@ -12,3 +12,6 @@ const menuSelected = document.querySelectorAll('nav ul li a') // to close menu w
 for (let element of menuSelected) {
   element.addEventListener('click', () => showMenu.classList.remove('show'))
 }
+
+/* SWIPER for slides n testimonials */
+const swiper = new Swiper('.swiper', {})

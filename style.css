@@ -325,6 +325,36 @@ a.logo {
 
 /*==========SERVICES==========*/
 
+/*==========TESTIMONIALS==========*/
+
+.swiper-slide blockquote {
+  position: relative;
+  gap: 1.625rem;
+  padding: 2rem;
+}
+
+blockquote span {
+  position: absolute;
+  top: 2rem;
+  font: 400 3rem/0rem 'Montagu Slab', serif;
+  color: var(--color-medium);
+  transform: rotate(180deg);
+}
+
+cite.flex {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+cite img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/*==========TESTIMONIALS==========*/
+
 /*=================================*/
 /*==========RESPONSIVE==========*/
 /*=================================*/
