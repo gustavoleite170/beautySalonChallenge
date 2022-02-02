@@ -14,4 +14,20 @@ for (let element of menuSelected) {
 }
 
 /* SWIPER for slides n testimonials */
-const swiper = new Swiper('.swiper', {})
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+  mousewheel: true,
+  keyboard: true,
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets'
+  },
+  breakpoints: {
+    // when window width is >= 660px
+    660: {
+      slidesPerView: 2
+    }
+  }
+})
