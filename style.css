@@ -3,14 +3,18 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  z-index: 1;
 }
 
 /*==========ROOT==========*/
 :root {
+  /*==========MEASURES==========*/
   --height: 4.5rem;
   --margin-width: 6.4vw;
+  /*==========MEASURES==========*/
 
-  --color: 159;
+  /*==========COLORS==========*/
+  --color: 70;
   --color-light: hsl(var(--color), 65%, 88%, 1);
   --color-medium: hsl(var(--color), 36%, 57%, 1);
   --color-dark: hsl(var(--color), 41%, 10%, 1);
@@ -18,6 +22,7 @@
   --white: hsl(0, 0%, 100%, 1);
   --gray: #e4e4e4;
   --text-gray: hsl(0, 0%, 46%, 1);
+  /*==========COLORS==========*/
 }
 
 /*==========ROOT==========*/
@@ -32,7 +37,11 @@ main {
 }
 
 .paddings {
-  padding: 5rem 0;
+  padding: calc(3.5rem + var(--height)) 0 5rem;
+}
+
+.paddings-2 {
+  padding: calc(0.5rem + var(--height)) 0 5rem;
 }
 
 a.logo {
@@ -103,10 +112,12 @@ a.logo {
 
 /*==========HEADER==========*/
 #header {
+  position: fixed;
   width: 100vw;
   height: var(--height);
   background-color: var(--ice-white);
   border-bottom: solid 1px var(--gray);
+  z-index: 100;
 }
 
 #header nav {
@@ -153,7 +164,6 @@ a.logo {
 /*==========HEADER==========*/
 
 /*==========NAVIGATION==========*/
-
 #navigations {
   visibility: hidden;
   position: fixed;
@@ -171,7 +181,6 @@ a.logo {
 
 .show #navigations {
   visibility: visible;
-  z-index: 101;
 }
 
 .show .icon-menu {
@@ -329,8 +338,6 @@ a.logo {
 /*==========TESTIMONIALS==========*/
 .swiper-slide blockquote.flex {
   position: relative;
-  height: 100%;
-  gap: 0;
   justify-content: space-between;
   padding: 2rem;
 }
@@ -356,10 +363,9 @@ cite img {
   border-radius: 50%;
 }
 
-.swiper {
-  position: absolute;
+#testimonials .swiper {
   width: calc(100vw - (2 * var(--margin-width)));
-  height: 15rem;
+  padding: 1rem 1rem;
 }
 
 .swiper-slide {
@@ -372,15 +378,46 @@ cite img {
   background-color: var(--color-medium);
 }
 
-.swiper .swiper-pagination-bullet {
-  margin-top: 2rem;
-}
-
-.swiper .swiper-pagination-bullet {
+#testimonials .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
   height: 0.75rem;
   width: 0.75rem;
 }
+
+#testimonials .swiper .swiper-pagination {
+  position: relative;
+  margin-top: 2rem;
+}
+
 /*==========TESTIMONIALS==========*/
+
+/*==========CONTACT==========*/
+
+#contact {
+  background-color: var(--ice-white);
+}
+
+#contact > div > h2 {
+  margin-bottom: 1rem;
+}
+
+#contact > div > p {
+  margin-bottom: 3rem;
+}
+
+#contact .flex {
+  margin-top: 5rem;
+}
+
+#contact .flex-1rem {
+  flex-direction: row;
+}
+
+#contact .flex-1rem > div {
+  font-size: 1.5rem;
+  color: var(--color-medium);
+}
+
+/*==========CONTACT==========*/
 
 /*=================================*/
 /*==========RESPONSIVE==========*/
