@@ -14,7 +14,7 @@
   /*==========MEASURES==========*/
 
   /*==========COLORS==========*/
-  --color: 70;
+  --color: 159;
   --color-light: hsl(var(--color), 65%, 88%, 1);
   --color-medium: hsl(var(--color), 36%, 57%, 1);
   --color-dark: hsl(var(--color), 41%, 10%, 1);
@@ -418,6 +418,12 @@ cite img {
 }
 
 /*==========CONTACT==========*/
+
+/*==========FOOTER==========*/
+footer {
+  background-color: var(--color-medium);
+}
+/*==========FOOTER==========*/
 
 /*=================================*/
 /*==========RESPONSIVE==========*/
