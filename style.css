@@ -439,7 +439,7 @@ footer .logo span {
   color: var(--ice-white);
 }
 
-footer > .flex:nth-child(1) {
+footer > div.flex {
   gap: 1.5rem;
 }
 
@@ -448,13 +448,13 @@ footer > .flex:nth-child(1) {
   flex-direction: row;
 }
 
-footer .margins .flex div {
+#bottom-icons div {
   position: relative;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-footer .margins .flex a {
+#bottom-icons a {
   color: var(--ice-white);
   font-size: 1.5rem;
   position: absolute;
@@ -462,8 +462,12 @@ footer .margins .flex a {
   transition: top 0.3s;
 }
 
-footer .margins .flex a:hover {
+#bottom-icons a:hover {
   top: -0.25rem;
+}
+
+footer section.flex {
+  gap: 1.5rem;
 }
 
 footer .flex-1rem {
@@ -494,6 +498,13 @@ footer .text-smooth {
 @media only screen and (min-width: 850px) {
   .card {
     width: 41vw;
+  }
+
+  footer > .flex,
+  #contact > .flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -531,8 +542,7 @@ footer .text-smooth {
     justify-content: space-between;
   }
 
-  #about > div.flex,
-  #contact > div.flex {
+  #about > div.flex {
     flex-direction: row;
     gap: unset;
     justify-content: space-between;
