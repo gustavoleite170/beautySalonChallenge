@@ -423,6 +423,49 @@ cite img {
 footer {
   background-color: var(--color-medium);
 }
+
+footer .logo span {
+  color: var(--ice-white);
+}
+
+footer > .flex:nth-child(1) {
+  gap: 1.5rem;
+}
+
+#bottom-icons {
+  padding-top: 1rem;
+}
+
+footer .margins .flex {
+  flex-direction: row;
+}
+
+footer .margins .flex div {
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+footer .margins .flex a {
+  color: var(--ice-white);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  transition: top 0.3s;
+}
+
+footer .margins .flex a:hover {
+  top: -0.25rem;
+}
+
+footer .flex-1rem {
+  gap: 0.75rem;
+}
+
+footer .text-smooth {
+  color: var(--ice-white);
+}
+
 /*==========FOOTER==========*/
 
 /*=================================*/
