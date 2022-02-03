@@ -129,6 +129,10 @@ a.logo {
   width: 100%;
 }
 
+#header > .margins {
+  margin: 0;
+}
+
 #header li {
   position: relative;
 }
@@ -312,10 +316,17 @@ a.logo {
   font-weight: 700;
 }
 
+#services section.flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .card {
   padding: 3.625rem 2rem;
   border: 0.5px solid var(--gray);
   border-radius: 0.25rem;
+  width: min(87.2vw);
   box-shadow: 0 0.25rem 0.25rem var(--color-medium);
   background-color: var(--ice-white);
 }
@@ -396,16 +407,16 @@ cite img {
   background-color: var(--ice-white);
 }
 
-#contact > div > h2 {
+#contact > div > section > h2 {
   margin-bottom: 1rem;
 }
 
-#contact > div > p {
+#contact > div > section > p {
   margin-bottom: 3rem;
 }
 
-#contact .flex {
-  margin-top: 5rem;
+#contact > .flex {
+  gap: 5rem;
 }
 
 #contact .flex-1rem {
@@ -434,9 +445,6 @@ footer > .flex:nth-child(1) {
 
 #bottom-icons {
   padding-top: 1rem;
-}
-
-footer .margins .flex {
   flex-direction: row;
 }
 
@@ -472,11 +480,61 @@ footer .text-smooth {
 /*==========RESPONSIVE==========*/
 /*=================================*/
 
-/*==========600px==========*/
+/*==========600px+==========*/
 
 @media only screen and (min-width: 600px) {
   #home section.image,
   #about .image {
     margin: 0 auto;
+  }
+}
+
+/*==========850px+==========*/
+
+@media only screen and (min-width: 850px) {
+  .card {
+    width: 41vw;
+  }
+}
+
+/*==========1285px+==========*/
+
+@media only screen and (min-width: 1285px) {
+  :root {
+    --margin-width: 9vw;
+  }
+
+  .card {
+    width: 22rem;
+  }
+
+  .paddings {
+    padding: calc(8.5rem + var(--height)) 0 10rem;
+  }
+
+  .paddings-2 {
+    padding: calc(5.5rem + var(--height)) 0 10rem;
+  }
+
+  footer.paddings-2 {
+    padding: calc(0.5rem + var(--height)) 0 5rem;
+  }
+
+  #home > .flex > .margins {
+    margin: 0;
+  }
+
+  #home > div.flex {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 7.375rem;
+    justify-content: space-between;
+  }
+
+  #about > div.flex,
+  #contact > div.flex {
+    flex-direction: row;
+    gap: unset;
+    justify-content: space-between;
   }
 }
