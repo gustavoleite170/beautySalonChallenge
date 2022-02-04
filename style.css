@@ -574,7 +574,11 @@ footer .text-smooth {
 
   #about > div.flex {
     flex-direction: row;
-    gap: unset;
-    justify-content: space-between;
+    gap: 4.685vw;
+  }
+
+  #about > div.flex > section.margins.flex {
+    margin-left: 0;
+    width: 38.125rem;
   }
 }
