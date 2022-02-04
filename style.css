@@ -405,6 +405,8 @@ cite img {
 
 #contact {
   background-color: var(--ice-white);
+  display: flex;
+  justify-content: center;
 }
 
 #contact > div > section > h2 {
@@ -417,6 +419,10 @@ cite img {
 
 #contact > .flex {
   gap: 5rem;
+}
+
+#contact > .flex > section {
+  width: min(87.2vw, 20.4375rem);
 }
 
 #contact .flex-1rem {
@@ -491,6 +497,11 @@ footer .text-smooth {
   #about .image {
     margin: 0 auto;
   }
+
+  #contact > .flex > section {
+    width: max(29.58vw, 20.4375rem);
+    margin-right: 2.5rem;
+  }
 }
 
 /*==========850px+==========*/
@@ -500,11 +511,30 @@ footer .text-smooth {
     width: 41vw;
   }
 
-  footer > .flex,
-  #contact > .flex {
+  footer > .flex {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  #contact > .flex {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+  }
+
+  #contact {
+    background-color: var(--ice-white);
+    display: flex;
+    justify-content: start;
+  }
+
+  #contact > .flex > .flex {
+    align-self: center;
+  }
+
+  #contact .flex-1rem > .text-smooth {
+    font-size: 1.3rem;
   }
 }
 
