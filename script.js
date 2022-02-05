@@ -32,3 +32,17 @@ const swiper = new Swiper('.swiper', {
     }
   }
 })
+
+/* Scroll reveal to make smooth animation on page */
+
+const scroll = ScrollReveal({
+  origin: 'bottom',
+  distance: '2rem',
+  duration: 550,
+  reset: true
+})
+
+scroll.reveal(
+  `#home section.image, #home section.margins, #about section.image, #about section.margins, #services section.flex-1rem, #services section.flex, #testimonials h2, #testimonials .swiper, #contact > div > section, #contact > div > div`,
+  { interval: 200 }
+)
