@@ -625,3 +625,22 @@ footer .text-smooth {
     width: 38.125rem;
   }
 }
+
+/*==========Button Back-To-Top==========*/
+
+.back-to-top {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-medium);
+  color: var(--ice-white);
+  border-radius: 50%;
+  border: solid 1px var(--ice-white);
+  font: 700 1.5rem serif;
+  z-index: 105;
+  bottom: 1rem;
+  right: 1rem;
+}
