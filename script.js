@@ -13,6 +13,15 @@ for (let element of menuSelected) {
   element.addEventListener('click', () => showMenu.classList.remove('show'))
 }
 
+/* Back to top button behavior */
+const buttonBack = document.querySelector('.back-to-top')
+
+window.addEventListener('scroll', () => {
+  window.scrollY >= 900
+    ? buttonBack.classList.add('show')
+    : buttonBack.classList.remove('show')
+})
+
 /* SWIPER for slides n testimonials */
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
@@ -44,5 +53,5 @@ const scroll = ScrollReveal({
 
 scroll.reveal(
   `#home section.image, #home section.margins, #about section.image, #about section.margins, #services section.flex-1rem, #services section.flex, #testimonials h2, #testimonials .swiper, #contact > div > section, #contact > div > div`,
-  { interval: 200 }
+  { interval: 0 }
 )
